@@ -7,7 +7,7 @@ import { Incomplete } from "./components/Incomplete";
 function App() {
   return (
     <motion.div
-      className="bg-red-200"
+      className="bg-violet-100"
       initial={{ opacity: 0, x: -700 }}
       whileInView={{ opacity: 100, x: 0 }}
       transition={{ duration: 1.5 }}
