@@ -1,30 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Todo } from "./Todo";
 import { Title } from "./Title";
+import { TodoContext } from "../App";
 export const TodoList = () => {
-  const list = [
-    {
-      title: "Complete Todo",
-      note: "Complete the capstone project",
-      date: new Date("12 January 2023"),
-      done: false,
-    },
-    {
-      title: "Complete Todo",
-      note: "Complete the capstone project",
-      date: new Date("12 January 2023"),
-      done: true,
-    },
-  ];
-  const items = list.map((item, index) => (
-    <Todo
-      key={index.toString()}
-      title={item.title}
-      note={item.note}
-      date={item.date}
-      done={item.done}
-    />
-  ));
+  const todo = useContext(TodoContext);
+  const items = todo.todoList.map((item,index)=><Todo
+        key={index.toString()}
+        title={item.title}
+        note={item.note}
+        date={item.date}
+      />
+  );
+
   return (
     <>
       <Title>All Items</Title>
