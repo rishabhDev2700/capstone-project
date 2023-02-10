@@ -11,7 +11,7 @@ export const Topbar = () => {
     e.preventDefault();
     setToggle(!toggle);
     const target = e.target;
-    const data = {title:target.title.value, note: target.note.value,date:target.dateAdded.value};
+    const data = {title:target.title.value, note: target.note.value,date:target.dateAdded.value,checked:false};
     setList([...list,data])
   }
   console.log(todo.todoList)
